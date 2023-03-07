@@ -1,0 +1,7 @@
+node_modules
+PRIVATE.md
+dev.js
+
+in client npm i
+    circle back to dependancy issues with 'npm audit'
+
