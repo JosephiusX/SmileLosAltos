@@ -23,7 +23,7 @@ class Header extends Component { // Using Class component for orginization.
           <Link
             to={this.props.auth ? '/surveys' : '/'} // if auth user > /surveys(dashboard), else > Landing page
             className="left brand-logo">
-            Emaily
+            Smile Los Altos
           </Link>
             <ul>
               <li className="right">
