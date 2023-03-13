@@ -1,4 +1,5 @@
 import React from "react";
+import AboutUs from "./AboutUs";
 import styles from './styles/index.module.css';
 
 const Landing = () => {
@@ -14,14 +15,7 @@ const Landing = () => {
         </p>
       </div>
 
-      <div className={styles.about_us}>
-        <h1>
-          With over 34 years of experience and expertise,
-        </h1>
-        <p>
-          Los Altos Dental Care specializes in all aspects of dental care. From general dentistry to full mouth reconstructions, Los Altos Dental Care has you covered
-        </p>
-      </div>
+      <AboutUs />
 
     </div>
   )
