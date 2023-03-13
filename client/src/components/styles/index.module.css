@@ -1,0 +1,116 @@
+@import 'variables.module.css';
+@import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300;700&family=Carme&display=swap');
+
+:root {
+  /* Grid */
+  --grid-width: 114rem;
+  --gutter-vertical: 8rem;
+  --gutter-vertical-small: 6rem;
+  --gutter-horizontal: 6rem;
+  
+  /* color */
+  --color-background: white;
+  --color-accent-light:#FFE0E6;
+  --color-accent:#F7A2AC;
+  --color-primary:#3274F1;
+  --color-primary-dark:#254BB3;
+  
+  /* Breakpoints */
+  --bp-big: min-width: 112.5em;
+  --bp-tab-land: max-width: 75em;
+  --bp-tab-port: max-width: 56.25em
+  --bp-phone: max-width: 37.5em
+  
+  /* Font size */
+  --font-size-base: 1.6rem;
+  --font-size-xl:calc(var(--font-size-base) * 1.5)
+  --font-size-l:calc(var(--font-size-base) * 1.3)
+  --font-size-m:calc(var(--font-size-base) * 1.1)
+  --font-size-s:calc(var(--font-size-base) * 0.9)
+}
+
+*,
+*::after,
+*::before {
+    margin: 0rem;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+body {
+  font-family: 'Averia Sans Libre', cursive;
+  background-color: var(--color-background);
+}
+
+.title {
+  text-align: center;
+  background-image: linear-gradient(to bottom, var(--color-primary-dark) 10%, var(--color-primary) 90%);
+  color: var(--color-background);
+  padding: .7rem;
+
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    height: 95vh;
+  }
+}
+
+.about_us {
+  text-align: center;
+  background:linear-gradient(to bottom, var(--color-primary-dark) 10%, var(--color-primary) 90%);
+  -webkit-background-clip: text; /* Safari/Chrome */
+  -moz-background-clip: text; /* Firefox */
+  -webkit-text-fill-color: transparent; /* Safari/Chrome */
+  -moz-text-fill-color: transparent;
+}
+
+/* Responsive container */
+.container {
+  width: 100%;
+  max-width: 112.5em;
+  margin: 0 auto
+}
+@media(min-width: var(--bp-tab-land)) {
+  .container {
+    max-width: var(--bp-tab-land)
+  }
+}
+@media(min-width: var(--bp-tab-port)) {
+  .container {
+    max-width: var(--bp-tab-port)
+  }
+}
+@media(min-width: var(--bp-phone)) {
+  .container {
+    max-width: var(--bp-phone)
+  }
+}
+
+/* Responsive Fonts */
+body {
+  font-size: var(--font-size-base);
+}
+@media (min-width: var(--bp-big)) {
+  body {
+    font-size: var(--font-size-xl);
+  }
+}
+@media (min-width: var(--bp-tab-land)) {
+  body {
+    font-size: var(--font-size-l);
+  }
+}
+@media (min-width: var(--bp-tab-port)) {
+  body {
+    font-size: var(--font-size-m);
+  }
+}
+@media (min-width: var(--bp-phone)) {
+  body {
+    font-size: var(--font-size-s);
+  }
+}
+
+
+

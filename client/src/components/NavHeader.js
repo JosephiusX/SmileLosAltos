@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import styles from './styles/NavHeader.module.css';
 
-class Header extends Component { // Using Class component for orginization. 
+class NavHeader extends Component { // Using Class component for orginization. 
   renderContent() { // Render correct content based on users state
     switch (this.props.auth) {
       case null:
@@ -40,4 +41,4 @@ function mapStateToProps({ auth }) { // destructuring the auth property from sta
   return { auth };
 }
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps)(NavHeader);
