@@ -13,36 +13,142 @@
     height: 30vh;
   }
 }
-
-a:link,/* all links */
-a:visited {
-  color: var(--color-background);
+/* naming convention not consistant/ I didn't consiter the navigation parent will circle back */
+.nav__checkbox {
+  display: none;
+}
+.nav__button {
+  background-color: var(--color-white);
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .1);
+  text-align: center;
+  cursor: pointer;
+}
+@media (min-width: 48em) and (max-width: 64em) {
+  .nav__button {
+    top: 4rem;
+    right: 4rem;
+  }
+}
+@media (max-width: 48em) {
+  .nav__button {
+    top: 3rem;
+    right: 3rem;
+  }
+}
+.nav__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(var(--color-primary-light), var(--color-primary-dark));
+  z-index: 1000;
+  transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+@media (min-width: 48em) and (max-width: 64em) {
+  .nav__background {
+    top: 4.5rem;
+    right: 4.5rem;
+  }
+}
+@media (max-width: 48em) {
+  .nav__background {
+    top: 3.5rem;
+    right: 3.5rem;
+  }
+}
+.nav__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+.nav__item {
+  margin: 1rem;
+}
+.nav__link {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: var(--color-white);
   text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-white) 50%);
+  background-size: 220%;
+  transition: all .4s;
+}
+.nav__link span {
+  margin-right: 1.5rem;
+  display: inline-block;
+}
+.nav__link:hover,
+.nav__link:active {
+  background-position: 100%;
+  color: var(--color-primary);
+  transform: translateX(1rem);
+}
+.nav__checkbox:checked ~ .nav__background {
+  transform: scale(80);
+}
+.nav__checkbox:checked ~ .nav__nav {
+  opacity: 1;
+  width: 100%;
+}
+.nav__icon {
+  position: relative;
+  margin-top: 3.5rem;
+  width: 3rem;
+  height: 2px;
+  background-color: var(--color-grey-dark-3);
+  display: inline-block;
+}
+.nav__icon::before,
+.nav__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all .2s;
+  width: 3rem;
+  height: 2px;
+  background-color: var(--color-grey-dark-3);
+  display: inline-block;
+}
+.nav__icon::before {
+  top: -0.8rem;
+}
+.nav__icon::after {
+  top: 0.8rem;
+}
+.nav__button:hover .nav__icon::before {
+  top: -1rem;
+}
+.nav__button:hover .nav__icon::after {
+  top: 1rem;
+}
+.nav__checkbox:checked + .nav__button .nav__icon {
+  background-color: transparent;
+}
+.nav__checkbox:checked + .nav__button .nav__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.nav__checkbox:checked + .nav__button .nav__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
 }
 
-.upper_left_link {/* Smile los Altos link  */
-  position: absolute;
-  top: 03%;
-  left: 03%;
-  width: 100vw; /* keeps los altos on one line */
-  
-}
-.sl_pt1{/* upper_left_link part 1 */
-  position: absolute;
-  font-size: 1.68rem;
-  font-weight: 700;
-  top: 10%;
-  letter-spacing: .1rem;
-  margin: 0;
-}
-.sl_pt2{/* upper_left_link part 2 */
-  position: absolute;
-  font-size: 1.05rem;
-  font-weight: 700;
-  top: 140%;
-  letter-spacing: .017rem;
-  margin: 0;
-}
 
 .title_main {/* LOS ALTOS DENTAL CARE */
   position: relative;
@@ -52,7 +158,6 @@ a:visited {
   letter-spacing: .01rem;
   text-transform: uppercase;
 }
-
 .title_secondary { /* Treatment that can make all the difference */
   position: relative;
   font-size: .79rem;
@@ -61,10 +166,10 @@ a:visited {
   letter-spacing: .02rem;
 }
 
-/* "REQUEST APPOINTMENT" call to action */
+
 .btn,
 .btn:link,
-.btn:visited {
+.btn:visited { /* "REQUEST APPOINTMENT" call to action */
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -119,12 +224,10 @@ a:visited {
   z-index: -1;
   transition: all 0.4s;
 }
-
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
 }
-
 .btn-text,
 .btn-text:link,
 .btn-text:visited {
@@ -136,14 +239,12 @@ a:visited {
   padding: 3px;
   transition: all 0.2s;
 }
-
 .btn-text:hover {
   background-color: var(--color-primary);
   color: var(--color-white);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
 }
-
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0);

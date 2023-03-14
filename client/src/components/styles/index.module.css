@@ -10,13 +10,33 @@
   --gutter-horizontal: 6rem;
   
   /* color */
-  --color-black: black;
-  --color-background: white;
-  --color-accent-light:#FFE0E6;
-  --color-accent:#F7A2AC;
   --color-primary:#3274F1;
+  --color-primary-light: #769bff;
   --color-primary-dark:#254BB3;
-  
+
+  --color-secondary-light: #ffb900;
+  --color-secondary-dark: #ff7730;
+
+  --color-tertiary-light: #ff29ff;
+  --color-tertiary-dark: #ae00b7;
+
+  --color-grey-light-1: #f7f7f7;
+  --color-grey-light-2: #eee;
+
+  --color-grey-dark: #777;
+  --color-grey-dark-2: #999;
+  --color-grey-dark-3: #333;
+
+  --color-white: #fff;
+  --color-black: #000;
+
+  --default-font-size: 1.6rem;
+
+  --grid-width: 114rem;
+  --gutter-vertical: 8rem;
+  --gutter-vertical-small: 6rem;
+  --gutter-horizontal: 6rem;
+
   /* Breakpoints */
   --bp-big: min-width: 112.5em;
   --bp-tab-land: max-width: 75em;
@@ -24,11 +44,11 @@
   --bp-phone: max-width: 37.5em
   
   /* Font size */
-  --font-size-base: 1.6rem;
+  /* --font-size-base: 1.6rem;
   --font-size-xl:calc(var(--font-size-base) * 1.5)
   --font-size-l:calc(var(--font-size-base) * 1.3)
   --font-size-m:calc(var(--font-size-base) * 1.1)
-  --font-size-s:calc(var(--font-size-base) * 0.9)
+  --font-size-s:calc(var(--font-size-base) * 0.9) */
 }
 
 *,

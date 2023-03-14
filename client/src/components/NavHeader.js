@@ -27,8 +27,36 @@ class NavHeader extends Component { // Using Class component for orginization.
             className={styles.upper_left_link}>
             <div className={styles.sl_pt1}>Smile</div> <br/> <div className={styles.sl_pt2}>Los Altos</div>
           </Link>
-            <ul>
+
+        <div className={styles.navigation}>
+            <input type="checkbox" className={styles.navigation__checkbox} id="navi-toggle"/>
+
+            <label for="navi-toggle" className={styles.navigation__button}>
+                <span className={styles.navigation__icon}>&nbsp;</span>
+            </label>
+
+            <div className={styles.navigation__background}>&nbsp;</div>
+
+            <nav className={styles.nav}>
+                  <ul className={styles.nav_list}>
+                      <li className={styles.nav_item}><a href="#" className={styles.nav_link}><span>01</span>About Us</a></li>
+                      <li className={styles.nav_item}><a href="#" className={styles.nav_link}><span>02</span>Featureing</a></li>
+                      <li className={styles.nav_item}><a href="#" className={styles.nav_link}><span>03</span>TJM Information</a></li>
+                      <li className={styles.nav_item}><a href="#" className={styles.nav_link}><span>04</span>Hours & Address</a></li>
+                      <li className={styles.nav_item}><a href="#" className={styles.nav_link}><span>05</span>Book now</a></li>
+                  </ul>
+              </nav>
+        </div>
+
+
+
+
+
+
+
+
               
+            <ul>
               <li>
                 {this.renderContent()}
               </li>
