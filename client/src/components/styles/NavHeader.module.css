@@ -1,41 +1,33 @@
 @import 'index.module.css';
 
-
-
-
-
 .banner {
   text-align: center;
   background-image: linear-gradient(to bottom, var(--color-primary-dark) 10%, var(--color-primary) 90%);
   color: var(--color-background);
   position: relative;
 }
-
 @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
   .banner {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 25vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 27vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 87%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 87%);
     height: 30vh;
   }
 }
 
-/* all links */
-a:link,
+a:link,/* all links */
 a:visited {
   color: var(--color-background);
   text-decoration: none;
 }
 
-/* Smile los Altos link  */
-.upper_left_link {
+.upper_left_link {/* Smile los Altos link  */
   position: absolute;
   top: 03%;
   left: 03%;
-  width: 100vw;
-  /* height: 50vh; */
+  width: 100vw; /* keeps los altos on one line */
+  
 }
-/* upper_left_link part 1 */
-.sl_pt1{
+.sl_pt1{/* upper_left_link part 1 */
   position: absolute;
   font-size: 1.68rem;
   font-weight: 700;
@@ -43,8 +35,7 @@ a:visited {
   letter-spacing: .1rem;
   margin: 0;
 }
-/* upper_left_link part 2 */
-.sl_pt2{
+.sl_pt2{/* upper_left_link part 2 */
   position: absolute;
   font-size: 1.05rem;
   font-weight: 700;
@@ -53,25 +44,24 @@ a:visited {
   margin: 0;
 }
 
-.title_main {
+.title_main {/* LOS ALTOS DENTAL CARE */
   position: relative;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 600;
-  top: 20%;
+  top: 30%;
   letter-spacing: .01rem;
   text-transform: uppercase;
 }
 
-.title_secondary {
+.title_secondary { /* Treatment that can make all the difference */
   position: relative;
-  font-size: .7rem;
+  font-size: .79rem;
   font-weight: 100;
-  top: 20%;
-  letter-spacing: .035rem;
+  top: 30%;
+  letter-spacing: .02rem;
 }
 
-
-
+/* "REQUEST APPOINTMENT" call to action */
 .btn,
 .btn:link,
 .btn:visited {
@@ -82,49 +72,41 @@ a:visited {
   border-radius: 10rem;
   transition: all 0.2s;
   position: absolute;
-  top: 65%;
-  left: 30%;
+  top: 67%;
+  left: 25%;
   font-size: 100%;
   border: none;
   cursor: pointer;
   color: var(--color-white);
 }
-
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
-
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
-
 .btn:active,
 .btn:focus {
   outline: none;
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-
 .btn--white {
   background-color: var(--color-primary-dark);
   color: var(--color-white);
 }
-
 .btn--white::after {
   background-color: var(--color-white);
 }
-
 .btn--green {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
-
 .btn--green::after {
   background-color: var(--color-primary);
 }
-
 .btn::after {
   content: "";
   display: inline-block;

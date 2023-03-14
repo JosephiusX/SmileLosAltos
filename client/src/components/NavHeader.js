@@ -28,7 +28,8 @@ class NavHeader extends Component { // Using Class component for orginization.
             <div className={styles.sl_pt1}>Smile</div> <br/> <div className={styles.sl_pt2}>Los Altos</div>
           </Link>
             <ul>
-              <li className="right">
+              
+              <li>
                 {this.renderContent()}
               </li>
             </ul>
