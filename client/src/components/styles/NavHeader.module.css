@@ -8,7 +8,6 @@
   text-align: center;
   background-image: linear-gradient(to bottom, var(--color-primary-dark) 10%, var(--color-primary) 90%);
   color: var(--color-background);
-  padding: 0.7rem;
   position: relative;
 }
 
@@ -20,33 +19,58 @@
   }
 }
 
-.title_main {
-  position: relative;
-  top: 17%;
-}
-
-.title_secondary {
-  position: relative;
-  top: 17%;
-}
-
-
-a:link {
-  color: var(--color-background);
-  text-decoration: none;
-}
-
+/* all links */
+a:link,
 a:visited {
   color: var(--color-background);
   text-decoration: none;
 }
 
-.upper_left {
+/* Smile los Altos link  */
+.upper_left_link {
   position: absolute;
-  top: 0;
-  left: 0;
-  padding: 1rem;
+  top: 03%;
+  left: 03%;
+  width: 100vw;
+  /* height: 50vh; */
 }
+/* upper_left_link part 1 */
+.sl_pt1{
+  position: absolute;
+  font-size: 1.68rem;
+  font-weight: 700;
+  top: 10%;
+  letter-spacing: .1rem;
+  margin: 0;
+}
+/* upper_left_link part 2 */
+.sl_pt2{
+  position: absolute;
+  font-size: 1.05rem;
+  font-weight: 700;
+  top: 140%;
+  letter-spacing: .017rem;
+  margin: 0;
+}
+
+.title_main {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 600;
+  top: 20%;
+  letter-spacing: .01rem;
+  text-transform: uppercase;
+}
+
+.title_secondary {
+  position: relative;
+  font-size: .7rem;
+  font-weight: 100;
+  top: 20%;
+  letter-spacing: .035rem;
+}
+
+
 
 .btn,
 .btn:link,

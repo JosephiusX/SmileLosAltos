@@ -24,8 +24,8 @@ class NavHeader extends Component { // Using Class component for orginization.
         <div className={styles.banner}>
           <Link
             to={this.props.auth ? '/Forms' : '/'} // if auth user > /surveys(dashboard), else > Landing page
-            className={styles.upper_left}>
-            Los Altos <br/> Dental Care
+            className={styles.upper_left_link}>
+            <div className={styles.sl_pt1}>Smile</div> <br/> <div className={styles.sl_pt2}>Los Altos</div>
           </Link>
             <ul>
               <li className="right">
