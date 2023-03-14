@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+
 import styles from './styles/NavHeader.module.css';
 
 class NavHeader extends Component { // Using Class component for orginization. 
@@ -10,29 +11,35 @@ class NavHeader extends Component { // Using Class component for orginization.
         return
       case false:
         return (
-          <li><a href="/auth/google">Login With Google</a></li>
+          <a href="/auth/google" className={styles.button}>Request Appointment</a>
         );
       default:
-        return <li><a href="/api/logout">Logout</a></li>  
+        return <a href="/api/logout" className={styles.button}>Logout</a>
     }
   }
 
   render() {
     return (
-      <nav>
-        <div className="nav-wrapper">
+      <div className={styles.container} >
+        <div className={styles.banner}>
           <Link
-            to={this.props.auth ? '/surveys' : '/'} // if auth user > /surveys(dashboard), else > Landing page
-            className="left brand-logo">
-            Smile Los Altos
+            to={this.props.auth ? '/Forms' : '/'} // if auth user > /surveys(dashboard), else > Landing page
+            className={styles.upper_left}>
+            Los Altos <br/> Dental Care
           </Link>
             <ul>
               <li className="right">
                 {this.renderContent()}
               </li>
             </ul>
+            <h1 className={styles.title_main}>
+              Los Altos Dental Care
+            </h1>
+            <p className={styles.title_secondary}>
+              Treatment that can make all the difference in the world
+            </p>
         </div>
-      </nav>
+      </div>
     )
   }
 }

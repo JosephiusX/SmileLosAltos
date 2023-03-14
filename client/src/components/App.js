@@ -6,8 +6,8 @@ import * as actions from '../actions';
 import NavHeader from './NavHeader';
 import Landing from './Landing';
 
-const Dashboard = () => <h2>Dashboard</h2>
-const SurveyNew = () => <h2>SurveyNew</h2>
+const Forms = () => <h2>Forms</h2>
+const FormNew = () => <h2>SurveyNew</h2>
 
 class App extends Component {
   componentDidMount() { // Once component is visible, will be used to fetch current user. 
@@ -21,8 +21,8 @@ class App extends Component {
           <div>
             <NavHeader />
             <Route path="/" exact component={Landing} />
-            <Route path="/surveys" exact component={Dashboard} />
-            <Route path="/surveys/new" component={SurveyNew}/>
+            <Route path="/Forms" exact component={Forms} />
+            <Route path="/Form/new" component={FormNew}/>
           </div>
         </BrowserRouter>
       </div>

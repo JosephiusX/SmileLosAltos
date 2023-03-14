@@ -1,8 +1,11 @@
+@import './index.module.css';
+
 .about_us {
   text-align: center;
-  background:linear-gradient(to bottom, var(--color-primary-dark) 10%, var(--color-primary) 90%);
+  background:linear-gradient(to bottom, var(--color-primary) 10%, var(--color-primary-dark) 90%);
   -webkit-background-clip: text; /* Safari/Chrome */
   -moz-background-clip: text; /* Firefox */
   -webkit-text-fill-color: transparent; /* Safari/Chrome */
   -moz-text-fill-color: transparent;
+  position: relative;
 }
