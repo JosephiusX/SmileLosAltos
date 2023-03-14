@@ -44,11 +44,7 @@
   --bp-phone: max-width: 37.5em
   
   /* Font size */
-  /* --font-size-base: 1.6rem;
-  --font-size-xl:calc(var(--font-size-base) * 1.5)
-  --font-size-l:calc(var(--font-size-base) * 1.3)
-  --font-size-m:calc(var(--font-size-base) * 1.1)
-  --font-size-s:calc(var(--font-size-base) * 0.9) */
+  --font-size-base: 1.6rem;
 }
 
 *,

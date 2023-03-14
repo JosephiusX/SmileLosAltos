@@ -21,6 +21,24 @@ class NavHeader extends Component { // Using Class component for orginization.
   render() {
     return (
       <div className={styles.container} >
+
+        <div className={styles.navigation}>
+            <input type="checkbox" className={styles.navigation__checkbox} id="navi-toggle"/>
+            <label for="navi-toggle" className={styles.navigation__button}>
+                <span className={styles.navigation__icon}>&nbsp;</span>
+            </label>
+            <div className={styles.navigation__background}>&nbsp;</div>
+            <nav className={styles.navigation__nav}>
+                <ul className={styles.navigation__list}>
+                    <li className={styles.navigation__item}><a href="#" className={styles.navigation__link}><span>01</span>About Natous</a></li>
+                    <li className={styles.navigation__item}><a href="#" className={styles.navigation__link}><span>02</span>Your benfits</a></li>
+                    <li className={styles.navigation__item}><a href="#" className={styles.navigation__link}><span>03</span>Popular tours</a></li>
+                    <li className={styles.navigation__item}><a href="#" className={styles.navigation__link}><span>04</span>Stories</a></li>
+                    <li className={styles.navigation__item}><a href="#" className={styles.navigation__link}><span>05</span>Book now</a></li>
+                </ul>
+            </nav>
+        </div>
+
         <div className={styles.banner}>
           <Link
             to={this.props.auth ? '/Forms' : '/'} // if auth user > /surveys(dashboard), else > Landing page
@@ -28,34 +46,6 @@ class NavHeader extends Component { // Using Class component for orginization.
             <div className={styles.sl_pt1}>Smile</div> <br/> <div className={styles.sl_pt2}>Los Altos</div>
           </Link>
 
-        <div className={styles.navigation}>
-            <input type="checkbox" className={styles.navigation__checkbox} id="navi-toggle"/>
-
-            <label for="navi-toggle" className={styles.navigation__button}>
-                <span className={styles.navigation__icon}>&nbsp;</span>
-            </label>
-
-            <div className={styles.navigation__background}>&nbsp;</div>
-
-            <nav className={styles.nav}>
-                  <ul className={styles.nav_list}>
-                      <li className={styles.nav_item}><a href="#" className={styles.nav_link}><span>01</span>About Us</a></li>
-                      <li className={styles.nav_item}><a href="#" className={styles.nav_link}><span>02</span>Featureing</a></li>
-                      <li className={styles.nav_item}><a href="#" className={styles.nav_link}><span>03</span>TJM Information</a></li>
-                      <li className={styles.nav_item}><a href="#" className={styles.nav_link}><span>04</span>Hours & Address</a></li>
-                      <li className={styles.nav_item}><a href="#" className={styles.nav_link}><span>05</span>Book now</a></li>
-                  </ul>
-              </nav>
-        </div>
-
-
-
-
-
-
-
-
-              
             <ul>
               <li>
                 {this.renderContent()}
@@ -68,6 +58,7 @@ class NavHeader extends Component { // Using Class component for orginization.
               Treatment that can make all the difference in the world
             </p>
         </div>
+
       </div>
     )
   }
