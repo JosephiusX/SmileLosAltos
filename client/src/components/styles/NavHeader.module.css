@@ -25,7 +25,6 @@ a:visited {
   top: 03%;
   left: 03%;
   width: 100vw; /* keeps los altos on one line */
-  
 }
 .sl_pt1{/* upper_left_link part 1 */
   position: absolute;
@@ -34,6 +33,7 @@ a:visited {
   top: 10%;
   letter-spacing: .1rem;
   margin: 0;
+  color: var(--color-white);
 }
 .sl_pt2{/* upper_left_link part 2 */
   position: absolute;
@@ -42,22 +42,25 @@ a:visited {
   top: 140%;
   letter-spacing: .017rem;
   margin: 0;
+  color: var(--color-white);
 }
 
 .title_main {/* LOS ALTOS DENTAL CARE */
   position: relative;
   font-size: 1.7rem;
   font-weight: 600;
-  top: 30%;
+  top: 15%;
   letter-spacing: .01rem;
   text-transform: uppercase;
+  color: var(--color-white);
 }
 .title_secondary { /* Treatment that can make all the difference */
   position: relative;
   font-size: .79rem;
   font-weight: 100;
-  top: 30%;
+  top: 15%;
   letter-spacing: .02rem;
+  color: var(--color-white);
 }
 
 
@@ -74,6 +77,8 @@ a:visited {
     font-size: var(--default-font-size);
     border: none;
     cursor: pointer;
+    color: linear-gradient(to bottom, var(--color-primary-dark) 10%, var(--color-primary) 90%);
+    top: 8.5rem;
 }
 
 .btn:hover {
@@ -98,28 +103,23 @@ a:visited {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
 }
-
 .btn:active,
 .btn:focus {
     outline: none;
     transform: translateY(-1px);
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
 }
-
 .btn--white {
     background-color: var(--color-white);
     color: var(--color-grey-dark);
 }
-
 .btn--white::after {
     background-color: var(--color-white);
 }
-
 .btn--green {
     background-color: var(--color-primary);
     color: var(--color-white);
 }
-
 .btn--green::after {
     background-color: var(--color-primary);
 }
@@ -135,14 +135,12 @@ a:visited {
     padding: 3px;
     transition: all .2s;
 }
-
 .btn-text:hover {
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    /* background-color: var(--color-primary); */
+    /* color: var(--color-white); */
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
 }
-
 .btn-text:active {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
     transform: translateY(0);
@@ -156,38 +154,36 @@ a:visited {
 .navigation__checkbox {
     display: none;
     }
-    
     .navigation__button {
     background-color: var(--color-white);
-    height: 7rem;
-    width: 7rem;
+    height: 3.1rem;
+    width: 3.1rem;
     position: fixed;
-    top: 6rem;
-    right: 6rem;
+    top: 1rem;
+    right: 1rem;
     border-radius: 50%;
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba(var(--color-black), 0.1);
     text-align: center;
     cursor: pointer;
-    }
-    
-    @media only screen and (max-width: 75em) {
+    top: 1rem;
+    right: 1.5rem;
+  }
+  /* @media only screen and (max-width: 75em) {
     .navigation__button {
     top: 4rem;
     right: 4rem;
     }
     }
-    
     @media only screen and (max-width: 56.25em) {
     .navigation__button {
     top: 3rem;
     right: 3rem;
     }
-    }
-    
+    } */
     .navigation__background {
-    height: 6rem;
-    width: 6rem;
+    height: 3rem;
+    width: 3rem;
     border-radius: 50%;
     position: fixed;
     top: 6.5rem;
@@ -196,32 +192,28 @@ a:visited {
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     }
-    
     @media only screen and (max-width: 75em) {
     .navigation__background {
     top: 4.5rem;
     right: 4.5rem;
     }
     }
-    
     @media only screen and (max-width: 56.25em) {
     .navigation__background {
     top: 3.5rem;
     right: 3.5rem;
     }
     }
-    
     .navigation__nav {
     height: 100vh;
     position: fixed;
-    top: 0;
+    top: -100vw;
     left: 0;
     z-index: 1500;
     opacity: 0;
     width: 0;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
-    
     .navigation__list {
     position: absolute;
     top: 50%;
@@ -231,11 +223,9 @@ a:visited {
     text-align: center;
     width: 100%;
     }
-    
     .navigation__item {
     margin: var(--default-font-size);
     }
-    
     .navigation__link:link,
     .navigation__link:visited {
     display: inline-block;
@@ -253,76 +243,64 @@ a:visited {
     );
     background-size: 220%;
     transition: all 0.4s;
-    }
-    
-    .navigation__link span {
+  }
+  .navigation__link span {
     margin-right: var(--gutter-horizontal);
     display: inline-block;
-    }
-    
-    .navigation__link:hover,
-    .navigation__link:active {
+  }
+  .navigation__link:hover,
+  .navigation__link:active {
     background-position: 100%;
     color: var(--color-primary);
     transform: translateX(var(--gutter-horizontal));
     }
-    
     .navigation__checkbox:checked ~ .navigation__background {
     transform: scale(80);
     }
-    
     .navigation__checkbox:checked ~ .navigation__nav {
     opacity: 1;
     width: 100%;
+    top: 0;
+    left: 0;
     }
-  
     .navigation__icon {
       position: relative;
-      margin-top: 3.5rem;
       }
-      
       .navigation__icon,
       .navigation__icon::before,
       .navigation__icon::after {
-      width: 3rem;
-      height: 2px;
-      background-color: var(--color-grey-dark-3);
+      width: 1.5rem;
+      height: .3rem;
+      background-color: var(--color-primary-dark);
       display: inline-block;
+      top: 1.5rem;
       }
-      
       .navigation__icon::before,
       .navigation__icon::after {
       content: "";
       position: absolute;
       left: 0;
       transition: all 0.2s;
-      }
-      
+      }     
       .navigation__icon::before {
       top: -0.8rem;
-      }
-      
+      }     
       .navigation__icon::after {
       top: 0.8rem;
-      }
-      
+      }      
       .navigation__button:hover .navigation__icon::before {
       top: -1rem;
-      }
-      
+      }     
       .navigation__button:hover .navigation__icon::after {
       top: 1rem;
-      }
-      
+      }      
       .navigation__checkbox:checked + .navigation__button .navigation__icon {
       background-color: transparent;
-      }
-      
+      }    
       .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
       top: 0;
       transform: rotate(135deg);
       }
-      
       .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
       top: 0;
       transform: rotate(-135deg);
